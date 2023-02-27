@@ -37,6 +37,6 @@ const dataSchema = new mongoose.Schema({
 })
 
 
-const Cars = mongoose.model("CarData", dataSchema)
+const Cars = mongoose.model("data", dataSchema)
 
 module.exports = Cars;

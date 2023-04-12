@@ -3,6 +3,9 @@ const app = express();
 const cors = require('cors')
 require("./db/connection")
 
+
+app.use(cors());
+
 // store data in json
 app.use(express.json())
 

@@ -54,7 +54,6 @@ userSchemna.methods.generateAuthToken = async function () {
         console.log(error)
     }
 }
-localStorage.setItem("userId", token);
 
 
 // //collection creation

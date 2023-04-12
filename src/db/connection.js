@@ -7,3 +7,4 @@ mongoose.connect("mongodb+srv://abhikhanna2710:12345@cluster0.sbhcdii.mongodb.ne
     }).catch((e) => {
         console.log("Not connected")
     })
+    

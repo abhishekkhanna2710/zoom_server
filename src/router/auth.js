@@ -8,7 +8,7 @@ const Cars = require("../models/dataSchema")
 
 
 router.get("/", (req, res) => {
-    res.send("Hi my project project reloading 2.0.....");
+    res.send("Hello world.....");
 })
 
 /****************   Old registeration of thapa ****************/
@@ -54,9 +54,6 @@ router.post("/signup", async (req, res) => {
 // **********Login Route**************
 
 router.post("/login", async (req, res) => {
-    // console.log(req.body)
-    // res.json({message: "awesome"})
-
     try {
         let token;
         const { email, password } = req.body
@@ -123,7 +120,7 @@ router.post("/BookingCars", async (req, res) => {
 
 router.get("/BookingCars", async (req, res) => {
     try {
-
+        // res.send("Booking page");
         const cars = await Cars.find();
         return res.status(200).send(cars);
 

@@ -30,7 +30,7 @@ const userSchemna = new mongoose.Schema({
     ]
 })
 
-const SECRET_KEY = 'MYNAMEISABHUISHEKKHANNAANDIAMFULLSTACKWEBDEVELOPERANDAMVERYSMART';
+const SECRET_KEY = "MYNAMEISABHUISHEKKHANNAANDIAMFULLSTACKWEBDEVELOPERANDAMVERYSMART";
 
 userSchemna.pre('save', async function (next) {
     if (this.isModified('password')) {
@@ -48,11 +48,13 @@ userSchemna.methods.generateAuthToken = async function () {
         let token = jwt.sign({ _id: this._id }, SECRET_KEY);
         this.tokens = this.tokens.concat({ token: token });
         await this.save();
+        console.log(token)
         return token;
     } catch (error) {
         console.log(error)
     }
 }
+localStorage.setItem("userId", token);
 
 
 // //collection creation
